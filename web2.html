@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="bg">
+    <div class="hero">
+      <nav>
+        <img src="mylogo.png" class="logo">
+        <ul>
+          <li><a href="web.html">HOME</a></li>
+          <li><a href="">PROFIL</a></li>
+        </ul>
+      </nav>
+      <div class="text">
+        <h1>Unravel-Tokyo Ghoul</h1>
+        <video id="myVideo" width="100%" height="500">
+          <source src="Unravel - Tokyo Ghoul.webm" type="video/webm">
+        </video>
+        <br>
+        <button onclick="playVid()" type="button" class="button">Play</button>
+        <button onclick="pauseVid()" type="button" class="button">Pause</button>
+      </div>
+    </div>
+<script>
+var vid = document.getElementById("myVideo");
+function playVid() {
+  vid.play();
+}
+function pauseVid() {
+  vid.pause();
+}
+</script>
+</body>
+</html>

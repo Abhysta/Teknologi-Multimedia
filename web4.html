@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="Style2.css">
+</head>
+
+<body>
+  <div class="bg">
+    <div class="awan">
+      <div class="hero">
+        <nav>
+          <img src="mylogo.png" class="logo">
+          <ul>
+            <li><a href="web.html">HOME</a></li>
+            <li><a href="">PROFIL</a></li>
+          </ul>
+        </nav>
+        <h2 id="text">
+        	<span style="display: initial;">Terima Kasih</span>
+        	<span>Sudah Mengunjung</span>
+          <span>Web Sederhana Saya</span>
+        </h2>
+        <div class="text">
+          <audio id="myAudio">
+            <source src="01.mp3" type="audio/mpeg" >
+          </audio>
+          <br>
+          <button onclick="playAud()" type="button" class="button">Play Musik</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+<script>
+var Aud = document.getElementById("myAudio");
+function playAud() {
+  Aud.play();
+}
+</script>
+<script type="text/javascript">
+	var text = document.getElementById('text');
+	var word = document.getElementsByTagName('span');
+	var i = 0;
+	function rotator(){
+		word[i].style.display = 'none';
+		i = ( i + 1 ) % word.length;
+		word[i].style.display = 'initial';
+
+	}
+	setInterval(rotator, 800);
+</script>
+</body>
+</html>
